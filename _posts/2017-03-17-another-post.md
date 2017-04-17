@@ -1,10 +1,18 @@
 ---
 layout: post
-title:  "Olsson"
+title:  "Another post"
 date:   2017-03-13 19:09:48 +0100
 tags: 
-    - Information science
-    - Michael Olsson
+    - beatles
+    - data
 ---
 
-<iframe width="560" height="315" src="https://opus.lib.uts.edu.au/handle/10453/3998" frameborder="0" allowfullscreen></iframe>
+This is just another post. See how to include data inside your posts:
+
+## Beatles Discography
+
+<ul>
+{% for album in site.data.beatles %}
+    <li><b>{{ album.Name }}</b> (released on {{ album.Released }})</li>
+{% endfor %}
+</ul>
